@@ -1,0 +1,203 @@
+::root {
+  --vinho: #3f0223;
+}
+
+@font-face {
+  font-family: Alliance;
+  src: url("../assets/fonts/AllianceNo1-Regular.9b6ad979.woff");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background-image: url("../assets/img/backgroud.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  font-family: "Alliance";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 95%;
+
+  /* border: 3px solid red; */
+  /* margin: 1em 5em 0 3em; */
+  margin-top: 1em;
+}
+
+menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 12px;
+
+  width: 480px;
+  height: 55px;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px none;
+  /* border: 1px solid red; */
+  margin: 0px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  padding: 0 1em;
+
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 25px;
+  /* max-width: 360px; */
+  min-width: 90px;
+  position: relative;
+  height: 100%;
+  min-height: 48px;
+  flex-shrink: 0;
+  overflow: hidden;
+  /* white-space: normal; */
+  text-align: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  text-transform: inherit;
+
+  /* user-select: none; */
+  /* appearance: none; */
+}
+
+.ativo {
+  background-color: white;
+  color: var(--vinho);
+}
+
+.conectarCarteira {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+
+  width: 300px;
+  min-width: 195px;
+  height: 55px;
+
+  border-radius: 12px;
+
+  color: #3f0223;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.conectarCarteira:hover {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5em;
+
+  border-radius: 23px;
+
+  width: 620px;
+  height: 420px;
+
+  background-color: rgb(52, 28, 40, 0.9);
+
+  padding: 50px;
+  box-sizing: border-box;
+
+  /* position: absolute; */
+}
+
+main p {
+  color: white;
+}
+
+.token1 {
+}
+
+.btnSwap {
+  font-weight: 500;
+  font-size: 28px;
+  /* line-height: 35px; */
+
+  width: 100%;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 16px 45px;
+
+  color: var(--vinho);
+  background: linear-gradient(91.06deg, rgb(205, 147, 72) -5.71%, rgb(244, 232, 103) 87.53%);
+}
+
+.lovoCat {
+  position: fixed;
+  right: 40px;
+  bottom: -15px;
+  margin-top: 50px;
+  width: 400px;
+  z-index: -1;
+}
+
+.lovoCat img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: #1f181c;
+  width: 100%;
+}
+
+footer a {
+  display: flex;
+  flex-direction: row;
+
+  margin-right: 6em;
+
+  color: rgb(117, 108, 112);
+  font-size: 14px;
+}
+
+footer a span {
+  margin-left: 1em;
+  padding-top: 0.5em;
+}
