@@ -125,7 +125,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   margin-bottom: 5em;
 
@@ -136,7 +136,7 @@ main {
 
   background-color: rgb(52, 28, 40, 0.9);
 
-  padding: 50px;
+  padding: 25px;
   box-sizing: border-box;
 
   /* position: absolute; */
@@ -146,7 +146,60 @@ main p {
   color: white;
 }
 
-.token1 {
+.container-seta {
+  position: fixed;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+
+  transform: translateY(130px);
+
+  background-color: #331a27;
+
+  border-radius: 99px;
+
+  /* z-index: 10;
+  top: 90px;
+  right: 0;
+  left: 0;
+  
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #341c28; */
+}
+
+.seta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  min-width: 65px;
+  min-height: 35px;
+  border-radius: 100px;
+
+  background-color: #3c222f;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.seta:hover {
+  background-color: #543444;
+}
+
+.svgSetaBordaCima {
+  transform: translateY(9px);
+  background-color: transparent;
+}
+
+.svgSetaBordaBaixo {
+  transform: translateY(-10px) rotate(180deg);
+  background-color: transparent;
 }
 
 .btnSwap {
@@ -168,7 +221,7 @@ main p {
 .lovoCat {
   position: fixed;
   right: 40px;
-  bottom: -15px;
+  bottom: 35px;
   margin-top: 50px;
   width: 400px;
   z-index: -1;
@@ -177,6 +230,23 @@ main p {
 .lovoCat img {
   width: 100%;
   height: auto;
+}
+
+section {
+  border: 1px solid white;
+
+  position: absolute;
+
+  transform: translateY();
+
+  min-width: 320px;
+  max-height: calc(100% - 64px);
+  border-radius: 15px;
+  background: #3b222f;
+
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px; */
+  /* rgba(0, 0, 0, 0.12) */
+  box-shadow: 1px 9px 10px 99px rgba(173, 71, 71, 0.12);
 }
 
 footer {
@@ -200,4 +270,64 @@ footer a {
 footer a span {
   margin-left: 1em;
   padding-top: 0.5em;
+}
+
+.mainTitulo {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  font-weight: 900;
+  font-size: 20px;
+
+  margin-bottom: 1em;
+}
+
+.token {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  /* border: 1px solid rgba(255, 255, 255, 0.07); */
+
+  border: 1px solid rgb(73, 51, 62);
+
+  border-radius: 12px;
+
+  padding: 16px 0px;
+
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.token p {
+  margin-left: .5em;
+  padding: 0 1em;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 70px;
+
+  border-radius: 12px;
+
+  background-color: #3c222f;
+
+  cursor: pointer;
+}
+
+.token p span {
+  margin-left: 0.5em;
+}
+
+
+.token input {
+  margin-right: .5em;
+  width: 230px;
+
+  border: none;
+  border-radius: 12px;
 }
