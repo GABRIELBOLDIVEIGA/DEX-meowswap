@@ -93,8 +93,8 @@ a {
 }
 
 .ativo {
-  background-color: white;
-  color: var(--vinho);
+  background-color: white !important;
+  color: var(--vinho) !important;
 }
 
 .conectarCarteira {
@@ -146,6 +146,50 @@ main p {
   color: white;
 }
 
+.mainTitulo {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  font-weight: 900;
+  font-size: 20px;
+
+  margin-bottom: 1em;
+}
+
+.main-opcao-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+
+  background: rgba(37, 11, 24, 0.5);
+  border-radius: 8px;
+}
+
+.main-opcao-pro p {
+  font-size: 14px;
+  padding-left: 1em;
+}
+
+.main-opcao-btn {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
 .container-seta {
   position: fixed;
   z-index: -1;
@@ -157,7 +201,7 @@ main p {
 
   z-index: 10;
 
-  transform: translateY(130px);
+  transform: translateY(140px);
 
   background-color: #331a27;
 
@@ -193,12 +237,12 @@ main p {
 }
 
 .svgSetaBordaCima {
-  transform: translateY(9px);
+  transform: translateY(11px);
   background-color: transparent;
 }
 
 .svgSetaBordaBaixo {
-  transform: translateY(-10px) rotate(180deg);
+  transform: translateY(-14px) rotate(180deg);
   background-color: transparent;
 }
 
@@ -206,6 +250,8 @@ main p {
   font-weight: 500;
   font-size: 28px;
   /* line-height: 35px; */
+
+  cursor: pointer;
 
   width: 100%;
 
@@ -216,6 +262,13 @@ main p {
 
   color: var(--vinho);
   background: linear-gradient(91.06deg, rgb(205, 147, 72) -5.71%, rgb(244, 232, 103) 87.53%);
+
+  transition: box-shadow 0.7s ease-in-out 0s;
+}
+
+.btnSwap:hover {
+  background-image: linear-gradient(91.06deg, rgb(205, 147, 72) -5.71%, rgb(244, 232, 103) 87.53%);
+  box-shadow: rgb(243, 231, 102) 0px -2px 10px;
 }
 
 .lovoCat {
@@ -272,18 +325,7 @@ footer a span {
   padding-top: 0.5em;
 }
 
-.mainTitulo {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
-
-  font-weight: 900;
-  font-size: 20px;
-
-  margin-bottom: 1em;
-}
-
+/* Div container selecao de tokens e input de quantidade */
 .token {
   display: flex;
   justify-content: space-between;
@@ -303,7 +345,7 @@ footer a span {
 }
 
 .token p {
-  margin-left: .5em;
+  margin-left: 0.5em;
   padding: 0 1em;
 
   display: inline-flex;
@@ -319,15 +361,55 @@ footer a span {
   cursor: pointer;
 }
 
+.token p:hover {
+  background: #543444;
+}
+
 .token p span {
   margin-left: 0.5em;
 }
 
+/* input quantidade  */
+.div-preco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-.token input {
-  margin-right: .5em;
+  margin-right: 0.5em;
   width: 230px;
 
-  border: none;
   border-radius: 12px;
+}
+
+.token input {
+  padding: 16.5px 14px;
+
+  width: 220px;
+
+  text-align: right;
+
+  height: 40px;
+  box-sizing: border-box;
+
+  background-color: transparent;
+  color: white;
+
+  font-size: 20px;
+
+  border: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+/* output preco dos tokens selecionados */
+output {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+
+  font-size: 14px;
+  font-weight: 300;
+
+  color: rgb(181, 160, 170);
 }

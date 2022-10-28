@@ -37,14 +37,16 @@
     </header>
 
     <main>
+      
       <div class="mainTitulo">
         <p>Exchange</p>
-        <div>
-          <button>off</button>
-          <button>on</button>
+        <div class="main-opcao-pro">
+          <p>Swap pro</p>
+          <button class="ativo main-opcao-btn">Off</button>
+          <button class="main-opcao-btn">On</button>
         </div>
       </div>
-      
+
       <div class="token">
         <p>
           Selecione Token
@@ -52,7 +54,11 @@
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
           </span>
         </p>
-        <input type="text" disabled>
+
+        <div class="div-preco">
+          <input type="text" placeholder="0" autocomplete="off" required />
+          <output> ~ $0.00</output>
+        </div>
       </div>
 
       <div class="container-seta">
@@ -72,10 +78,15 @@
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
           </span>
         </p>
-        <input type="text" disabled>
+
+        <div class="div-preco">
+          <input type="text" placeholder="0" autocomplete="off" required />
+          <output> ~ $0.00</output>
+        </div>
       </div>
 
       <button class="btnSwap">SWAP</button>
+
     </main>
 
     <!-- <section>
