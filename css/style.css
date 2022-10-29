@@ -92,6 +92,13 @@ a {
   /* appearance: none; */
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .ativo {
   background-color: white !important;
   color: var(--vinho) !important;
@@ -121,7 +128,30 @@ a {
   cursor: pointer;
 }
 
-main {
+.secSwap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 5em;
+
+  border-radius: 23px;
+
+  width: 620px;
+  height: 420px;
+
+  background-color: rgb(52, 28, 40, 0.9);
+
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.secSwap p {
+  color: white;
+}
+
+/* main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,12 +169,13 @@ main {
   padding: 25px;
   box-sizing: border-box;
 
-  /* position: absolute; */
-}
+  
+} 
+*/ 
 
-main p {
+/* main p {
   color: white;
-}
+} */
 
 .mainTitulo {
   display: flex;
@@ -285,6 +316,8 @@ main p {
   height: auto;
 }
 
+
+/* 
 section {
   border: 1px solid white;
 
@@ -297,10 +330,13 @@ section {
   border-radius: 15px;
   background: #3b222f;
 
-  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px; */
-  /* rgba(0, 0, 0, 0.12) */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+  rgba(0, 0, 0, 0.12)
+
   box-shadow: 1px 9px 10px 99px rgba(173, 71, 71, 0.12);
-}
+} 
+*/
+
 
 footer {
   display: flex;
@@ -412,4 +448,69 @@ output {
   font-weight: 300;
 
   color: rgb(181, 160, 170);
+}
+
+.catWaiting {
+  display: none;
+}
+
+.invisivel {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  
+  header {
+    justify-content: center;
+  }
+
+  menu {
+    display: none;
+  }
+
+  .conectarCarteira {
+    display: none;
+  }
+
+  main {
+    display: none;
+  }
+
+  .lovoCat {
+    display: none;
+  }
+
+  .catWaiting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    word-wrap: normal;
+    text-align: center;
+
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 40px;
+
+    width: 300px;
+
+    margin-bottom: 4em;
+  }
+
+  .catWaiting img {
+    width: 300px;
+    height: 390px;
+  }
+
+  .catWaiting p:nth-child(2) {
+    color: rgb(245, 232, 103);
+  }
+
+  .catWaiting p:nth-child(3) {
+    color: white;
+  }
+
+  .secToken {
+    visibility: hidden;
+  }
 }
