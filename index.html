@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/secToken.css" />
 
-    
     <title>MeowSwap</title>
   </head>
 
@@ -51,15 +50,18 @@
         </div>
 
         <div class="token">
-          <p>
-            Selecione Token
+          <div class="selec-token" id="tokenEscolhido" onclick="mostraListaTokens()">
+            <div>
+              <p>Selecione Token</p>
+            </div>
+
             <span>
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
             </span>
-          </p>
+          </div>
 
           <div class="div-preco">
-            <input type="text" placeholder="0" autocomplete="off" required />
+            <input id="quantidade" type="text" placeholder="0" autocomplete="off" required />
             <output> ~ $0.00</output>
           </div>
         </div>
@@ -71,70 +73,51 @@
             <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="14" height="17" viewBox="0 0 14 17" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M7 1V15.5714M7 15.5714L13 9.57633M7 15.5714L1 9.57633" stroke="#FFFFFF" stroke-width="2px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"></path></svg>
           </div>
 
-          <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#5A4650"></path></svg>
+          <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333e"></path></svg>
         </div>
 
         <div class="token">
-          <p>
-            Selecione Token
+          <div class="selec-token" id="stableCoin">
+            <div>
+              <p>Selecione Token</p>
+            </div>
+
             <span>
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
             </span>
-          </p>
+          </div>
 
           <div class="div-preco">
             <input type="text" placeholder="0" autocomplete="off" required />
-            <output> ~ $0.00</output>
+            <!-- <output> ~ $0.00</output> -->
           </div>
         </div>
 
         <button class="btnSwap">SWAP</button>
       </section>
 
+      <!-- <div class="valor">
+        <p>1 <span>x</span></p>
+      </div> -->
+
       <section class="secSwapPro"></section>
 
-      <section class="secToken ">
-        <div class="container">
-          <h2>Selecione Token</h2>
+      <section id="selecaoDeToken" class="secToken invisivel">
+        <div class="containerMaior">
+          <div class="container">
+            <h2>Selecione Token</h2>
 
-          <div class="">
-            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="fill: white; cursor: pointer" width="24" height="24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#fff"></path></svg>
-          </div>
-        </div>
-
-        <input type="text" placeholder="Nome Token"/>
-
-        <ul id="listaTokens">
-
-          <!-- <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
+            <div onclick="escondeSecao()">
+              <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="fill: white; cursor: pointer" width="24" height="24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#fff"></path></svg>
             </div>
-            <p>Cardano</p>
-          </li> -->
-          
-          
-        </ul>
+          </div>
+
+          <input type="text" placeholder="Nome Token" />
+
+          <ul id="listaTokens"></ul>
+        </div>
       </section>
     </main>
-
-    <!-- <section>
-      <div>
-        <h2>Selecione Token</h2>
-        <button>X</button>
-      </div>
-
-      <input type="text" placeholder="Nome Token" />
-
-      <ul>
-        <li>
-          <span><img src="../assets/icon-token/ada.png" alt="" /></span>
-          <p>ADA</p>
-          nome
-        </li>
-      </ul>
-    </section> -->
 
     <div class="lovoCat">
       <img src="assets/img/coolCat.png" />
@@ -158,6 +141,8 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/criaListaTokens.js"></script>
+    <!-- <script src="js/criaListaTokens.js"></script>
+    <script src="js/controle.js"></script>
+    <script src="js/selecionaToken.js"></script> -->
   </body>
 </html>
