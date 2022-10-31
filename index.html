@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/secToken.css" />
 
-    <script src="./js/app.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    
     <title>MeowSwap</title>
   </head>
 
@@ -94,7 +93,7 @@
 
       <section class="secSwapPro"></section>
 
-      <section class="secToken invisivel">
+      <section class="secToken ">
         <div class="container">
           <h2>Selecione Token</h2>
 
@@ -103,65 +102,18 @@
           </div>
         </div>
 
-        <input type="text" placeholder="Nome Token" />
+        <input type="text" placeholder="Nome Token"/>
 
-        <ul>
+        <ul id="listaTokens">
 
-          <li>
+          <!-- <li>
             <div>
               <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
               <p>ADA</p>
             </div>
             <p>Cardano</p>
-          </li>
+          </li> -->
           
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
-          
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
-          
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
-          
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
-          
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
-          
-          <li>
-            <div>
-              <img src="https://static.coinstats.app/coins/CardanojXddT.png" />
-              <p>ADA</p>
-            </div>
-            <p>Cardano</p>
-          </li>
           
         </ul>
       </section>
@@ -204,5 +156,8 @@
             /></svg></span
       ></a>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/criaListaTokens.js"></script>
   </body>
 </html>
