@@ -61,7 +61,7 @@
           </div>
 
           <div class="div-preco">
-            <input id="quantidade" type="text" placeholder="0" autocomplete="off" required />
+            <input id="quantidade" type="text" placeholder="0" autocomplete="off" required disabled />
             <output> ~ $0.00</output>
           </div>
         </div>
@@ -89,7 +89,7 @@
 
           <div class="div-preco">
             <input type="text" placeholder="0" autocomplete="off" required />
-            <!-- <output> ~ $0.00</output> -->
+            <output> ~ $0.00</output>
           </div>
         </div>
 
@@ -112,7 +112,7 @@
             </div>
           </div>
 
-          <input type="text" placeholder="Nome Token" />
+          <input id="filtroToken" type="text" placeholder="Nome Token" />
 
           <ul id="listaTokens"></ul>
         </div>
@@ -141,8 +141,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <!-- <script src="js/criaListaTokens.js"></script>
-    <script src="js/controle.js"></script>
-    <script src="js/selecionaToken.js"></script> -->
+    <script src="js/criaListaToken.js"></script>
+    <script src="js/filtraToken.js"></script>
   </body>
 </html>

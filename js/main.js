@@ -15,6 +15,7 @@ async function getCoins() {
 
   cryptos.forEach((element) => {
     criaListaTokens(element);
+    // console.log(element.name)
   });
 
   findStable(cryptos);
@@ -45,43 +46,17 @@ const tokenInput = selecaoDeToken.querySelector("input");
 
 function mostraListaTokens() {
   selecaoDeToken.classList.remove("invisivel");
-
   tokenInput.focus();
 }
 
 function escondeSecao() {
-  tokenInput.value = "";
+  // tokenInput.value = "";
   selecaoDeToken.classList.add("invisivel");
 }
 
-// Cria a lista de Token com base na API
-const listaTokens = document.querySelector("#listaTokens");
-
-function criaListaTokens(crypto) {
-  const li = document.createElement("li");
-  li.id = crypto.id;
-  li.innerHTML = `
-    <div>
-      <img src="${crypto.icon}" />
-      <p>${crypto.symbol}</p>
-    </div>
-      <p>${crypto.name}</p>
-  `;
-
-  li.addEventListener("click", function () {
-    const tokenSelecionado = cryptos.find((element) => element.id == this.id);
-    mostraTokenSelecionado(tokenSelecionado);
-    preco = tokenSelecionado.price.toFixed(2);
-    console.log(tokenSelecionado);
-
-    escondeSecao();
-  });
-
-  listaTokens.appendChild(li);
-}
-
 const tokenEscolhido = document.getElementById("tokenEscolhido");
-const div = tokenEscolhido.querySelector('div')
+const div = tokenEscolhido.querySelector('div');
+
 function mostraTokenSelecionado(coin) {
   div.innerHTML = `
     <p>
@@ -89,12 +64,14 @@ function mostraTokenSelecionado(coin) {
     </p>
     <img src="${coin.icon}">
   `;
+
+  quantidadeToken1.disabled = false;
 }
 
-const quantidade = document.getElementById('quantidade');
+const quantidadeToken1 = document.getElementById('quantidade');
 const output = document.querySelector('output');
 let preco;
-quantidade.addEventListener('keyup', function() {
+quantidadeToken1.addEventListener('keyup', function() {
   console.log(this.value);
 
   output.textContent = this.value * preco;
