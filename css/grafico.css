@@ -1,0 +1,10 @@
+canvas {
+  max-width: 620px;
+  max-height: 420px;
+
+  /* border: 1px solid blue; */
+  border-radius: 23px;
+  padding: 0.5em;
+
+  background-color: rgb(52, 28, 40, 0.8);  
+}

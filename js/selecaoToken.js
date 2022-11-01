@@ -1,9 +1,4 @@
-const token = document.querySelectorAll("[data-token]");
-
-token.forEach((element) => {
-  element.addEventListener("click", function () {
-    mostraListaTokens();
-    
-    
-  });
-});
+const token1 = document.getElementById('token1')
+token1.addEventListener("click", function () {
+  mostraListaTokens();
+})

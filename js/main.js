@@ -11,7 +11,7 @@ async function getCoins() {
   cryptos = await res.json();
   cryptos = cryptos.coins;
 
-  console.table(cryptos);
+  // console.table(cryptos);
 
   cryptos.forEach((element) => {
     criaListaTokens(element);
@@ -27,9 +27,9 @@ async function getCoins() {
 // seleciona a stable coin
 function findStable(cryptos) {
   const coin = cryptos.find((element) => element.symbol == "USDC");
-  
+
   const stable = document.getElementById("token2");
-  const div2 = stable.querySelector('div')
+  const div2 = stable.querySelector("div");
 
   div2.innerHTML = `
     <p>
@@ -53,11 +53,11 @@ function escondeSecao() {
 }
 
 const tokenEscolhido = document.getElementById("token1");
-const div = tokenEscolhido.querySelector('div');
+const div = tokenEscolhido.querySelector("div");
 
 function mostraTokenSelecionado(coin) {
   div.innerHTML = `
-    <p>
+    <p id="${coin.id}">
       ${coin.symbol} 
     </p>
     <img src="${coin.icon}">
@@ -66,11 +66,43 @@ function mostraTokenSelecionado(coin) {
   quantidadeToken1.disabled = false;
 }
 
-const quantidadeToken1 = document.getElementById('quantidade');
-const output = document.querySelector('output');
+const quantidadeToken1 = document.getElementById("quantidade");
+const output = document.querySelector("output");
 let preco;
-quantidadeToken1.addEventListener('keyup', function() {
+quantidadeToken1.addEventListener("keyup", function () {
   console.log(this.value);
 
-  output.textContent = '~$ ' + this.value * preco;
+  output.textContent = "~$ " + this.value * preco;
 });
+
+
+/////////////////////////////////////////////////////////////////
+const btnOff = document.querySelector("[data-btn=off]")
+const btnOn = document.querySelector("[data-btn=on]")
+// console.log(btnOff, btnOn)
+
+btnOff.addEventListener("click", () => {
+  btnOn.classList.remove('ativo')
+  btnOff.classList.add('ativo')
+  btnOn.disabled = false;
+  let canvas = document.querySelector('canvas');
+  canvas.remove();
+})
+
+btnOn.addEventListener("click", () => {
+  btnOff.classList.remove('ativo')
+  btnOn.classList.add('ativo')
+  btnOff.disabled = false;
+  btnOn.disabled = true;
+  criaCanvas()
+  getPrice();
+})
+
+function criaCanvas() {
+  let secSwap = document.querySelector(".secSwap");
+  let seContainer = document.querySelector(".sec-container");
+  let canvas = document.createElement("canvas");
+  canvas.id = "myChart";
+
+  seContainer.insertBefore(canvas, secSwap);
+}

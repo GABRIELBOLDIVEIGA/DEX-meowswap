@@ -99,6 +99,13 @@ main {
   align-items: center;
 }
 
+.sec-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 20px;
+}
+
 .ativo {
   background-color: white !important;
   color: var(--vinho) !important;
@@ -303,7 +310,6 @@ main {
 }
 
 .valor {
-  
   margin: 0px 0px 10px;
   color: rgb(255, 255, 255);
   line-height: 1.5;
