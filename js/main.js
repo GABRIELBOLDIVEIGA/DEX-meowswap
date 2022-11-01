@@ -15,7 +15,6 @@ async function getCoins() {
 
   cryptos.forEach((element) => {
     criaListaTokens(element);
-    // console.log(element.name)
   });
 
   findStable(cryptos);
@@ -29,7 +28,7 @@ async function getCoins() {
 function findStable(cryptos) {
   const coin = cryptos.find((element) => element.symbol == "USDC");
   
-  const stable = document.getElementById("stableCoin");
+  const stable = document.getElementById("token2");
   const div2 = stable.querySelector('div')
 
   div2.innerHTML = `
@@ -43,7 +42,6 @@ function findStable(cryptos) {
 // Controla a visibilidade da secao que contem a lista de tokens a serem escolhidos
 const selecaoDeToken = document.getElementById("selecaoDeToken");
 const tokenInput = selecaoDeToken.querySelector("input");
-
 function mostraListaTokens() {
   selecaoDeToken.classList.remove("invisivel");
   tokenInput.focus();
@@ -54,7 +52,7 @@ function escondeSecao() {
   selecaoDeToken.classList.add("invisivel");
 }
 
-const tokenEscolhido = document.getElementById("tokenEscolhido");
+const tokenEscolhido = document.getElementById("token1");
 const div = tokenEscolhido.querySelector('div');
 
 function mostraTokenSelecionado(coin) {
@@ -74,5 +72,5 @@ let preco;
 quantidadeToken1.addEventListener('keyup', function() {
   console.log(this.value);
 
-  output.textContent = this.value * preco;
+  output.textContent = '~$ ' + this.value * preco;
 });

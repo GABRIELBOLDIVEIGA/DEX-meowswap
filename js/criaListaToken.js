@@ -13,7 +13,7 @@ function criaListaTokens(crypto) {
 
   li.addEventListener("click", function () {
     const tokenSelecionado = cryptos.find((element) => element.id == this.id);
-  
+
     preco = tokenSelecionado.price.toFixed(2);
     // console.log(tokenSelecionado);
 
@@ -23,3 +23,4 @@ function criaListaTokens(crypto) {
 
   listaTokens.appendChild(li);
 }
+
