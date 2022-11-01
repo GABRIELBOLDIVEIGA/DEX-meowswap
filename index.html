@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/secToken.css" />
+    <link rel="stylesheet" href="css/grafico.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>MeowSwap</title>
   </head>
@@ -39,68 +42,70 @@
     </header>
 
     <main>
-      <section class="secSwap">
-        <div class="mainTitulo">
-          <p>Exchange</p>
-          <div class="main-opcao-pro">
-            <p>Swap pro</p>
-            <button class="ativo main-opcao-btn">Off</button>
-            <button class="main-opcao-btn">On</button>
-          </div>
-        </div>
+      <section class="sec-container">
+        
 
-        <div class="token">
-          <div data-token="token" class="selec-token" id="token1">
-            <div>
-              <p>Selecione Token</p>
+        <section class="secSwap">
+          <div class="mainTitulo">
+            <p>Exchange</p>
+            <div class="main-opcao-pro">
+              <p>Swap pro</p>
+              <button data-btn="off" class="ativo main-opcao-btn">Off</button>
+              <button data-btn="on" class="main-opcao-btn">On</button>
+            </div>
+          </div>
+
+          <div id="inputToken1" class="token">
+            <div data-token="token" class="selec-token" id="token1">
+              <div>
+                <p>Selecione Token</p>
+              </div>
+
+              <span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
+              </span>
             </div>
 
-            <span>
-              <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
-            </span>
+            <div id="preco1">
+              <div data-preco="preco1" class="div-preco">
+                <input id="quantidade" type="text" placeholder="0" autocomplete="off" required disabled />
+                <output> ~ $0.00</output>
+              </div>
+            </div>
           </div>
 
-          <div class="div-preco">
-            <input id="quantidade" type="text" placeholder="0" autocomplete="off" required disabled />
-            <output> ~ $0.00</output>
-          </div>
-        </div>
+          <div id="seta" class="container-seta">
+            <svg class="svgSetaBordaCima" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333E" fill="none"></path></svg>
 
-        <div class="container-seta">
-          <svg class="svgSetaBordaCima" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333E" fill="none"></path></svg>
-
-          <div class="seta">
-            <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="14" height="17" viewBox="0 0 14 17" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M7 1V15.5714M7 15.5714L13 9.57633M7 15.5714L1 9.57633" stroke="#FFFFFF" stroke-width="2px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"></path></svg>
-          </div>
-
-          <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333e"></path></svg>
-        </div>
-
-        <div class="token">
-          <div data-token="token" class="selec-token" id="token2">
-            <div>
-              <p>Selecione Token</p>
+            <div class="seta">
+              <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="14" height="17" viewBox="0 0 14 17" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M7 1V15.5714M7 15.5714L13 9.57633M7 15.5714L1 9.57633" stroke="#FFFFFF" stroke-width="2px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"></path></svg>
             </div>
 
-            <span>
-              <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
-            </span>
+            <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333e"></path></svg>
           </div>
 
-          <div class="div-preco">
-            <input type="text" placeholder="0" autocomplete="off" required />
-            <output> ~ $0.00</output>
-          </div>
-        </div>
+          <div id="inputToken2" class="token">
+            <div data-token="token" class="selec-token" id="token2">
+              <div>
+                <p>Selecione Token</p>
+              </div>
 
-        <button class="btnSwap">SWAP</button>
+              <span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L6 6L1 1" stroke="#FFFFFF" stroke-width="1.7px" stroke-linecap="round" fill="none"></path></svg>
+              </span>
+            </div>
+
+            <div id="preco2">
+              <div data-preco="preco2" class="div-preco">
+                <input type="text" placeholder="0" autocomplete="off" required disabled />
+                <output> ~ $0.00</output>
+              </div>
+            </div>
+          </div>
+
+          <button class="btnSwap">SWAP</button>
+        </section>
       </section>
-
-      <!-- <div class="valor">
-        <p>1 <span>x</span></p>
-      </div> -->
-
-      <section class="secSwapPro"></section>
 
       <section id="selecaoDeToken" class="secToken invisivel">
         <div class="containerMaior">
@@ -144,5 +149,9 @@
     <script src="js/criaListaToken.js"></script>
     <script src="js/filtraToken.js"></script>
     <script src="js/selecaoToken.js"></script>
+    <script src="js/inverteToken.js"></script>
+
+    <script src="js/grafico.js"></script>
+    
   </body>
 </html>
