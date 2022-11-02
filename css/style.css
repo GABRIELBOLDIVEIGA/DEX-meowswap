@@ -233,13 +233,19 @@ main {
 }
 
 .svgSetaBordaCima {
-  transform: translateY(10.5px);
+  /* transform: translateY(10.5px); */
   background-color: transparent;
+
+  -webkit-transform: translateY(11.5px);
+  -moz-transform: translateY(10.5px);
 }
 
 .svgSetaBordaBaixo {
-  transform: translateY(-10.5px) rotate(180deg);
+  /* transform: translateY(-10.5px) rotate(180deg); */
   background-color: transparent;
+
+  -webkit-transform: translateY(-8.5px) rotate(180deg);
+  -moz-transform: translateY(-10.5px) rotate(180deg);
 }
 
 .btnSwap {

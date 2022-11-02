@@ -65,22 +65,22 @@
               </span>
             </div>
 
-            <div id="preco1">
+            <!-- <div id="preco1"> -->
               <div data-preco="preco1" class="div-preco">
-                <input id="quantidade" type="text" placeholder="0" autocomplete="off" required disabled />
+                <input id="quantidade" type="text" placeholder="0" autocomplete="off" required disabled onfocus="mudaBorda()" onfocusout="resetaBorda()"/>
                 <output> ~ $0.00</output>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
 
           <div id="seta" class="container-seta">
-            <svg class="svgSetaBordaCima" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333E" fill="none"></path></svg>
+            <svg class="svgSetaBordaCima" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path id="stroke-border-cima" d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333E" fill="none"></path></svg>
 
             <div class="seta">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="14" height="17" viewBox="0 0 14 17" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M7 1V15.5714M7 15.5714L13 9.57633M7 15.5714L1 9.57633" stroke="#FFFFFF" stroke-width="2px" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF"></path></svg>
             </div>
 
-            <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333e"></path></svg>
+            <svg class="svgSetaBordaBaixo" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="26" viewBox="0 0 101 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="envelopeLineBig"><path id="stroke-border-baixo" d="M-1.52588e-05 24.8516H4.13486C6.84632 24.8516 9.00988 22.667 9.61276 20.0234C12.0972 9.12941 21.8451 1 33.4918 1H67.5082C79.1549 1 88.9028 9.12941 91.3873 20.0234C91.9901 22.667 94.1536 24.8516 96.8651 24.8516H101" stroke="#49333e"></path></svg>
           </div>
 
           <div id="inputToken2" class="token">
@@ -94,12 +94,12 @@
               </span>
             </div>
 
-            <div id="preco2">
+            <!-- <div id="preco2"> -->
               <div data-preco="preco2" class="div-preco">
                 <input type="text" placeholder="0" autocomplete="off" required disabled />
                 <output> ~ $0.00</output>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
 
           <button class="btnSwap">SWAP</button>
@@ -192,5 +192,6 @@
     <script src="js/inverteToken.js"></script>
     <script src="js/grafico.js"></script>
     <script src="js/conectarCarteira.js"></script>
+    <script src="js/mudaBorda.js"></script>
   </body>
 </html>
