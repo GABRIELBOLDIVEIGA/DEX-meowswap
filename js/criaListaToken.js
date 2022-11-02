@@ -13,21 +13,17 @@ function criaListaTokens(crypto) {
 
   li.addEventListener("click", function () {
     const tokenSelecionado = cryptos.find((element) => element.id == this.id);
-    // console.log(tokenSelecionado)
 
     preco = tokenSelecionado.price.toFixed(2);
-    // console.log(tokenSelecionado);
 
     mostraTokenSelecionado(tokenSelecionado);
     escondeSecao();
 
-
-    let canvas = document.querySelector('canvas');
+    let canvas = document.querySelector("canvas");
     canvas.remove();
-    criaCanvas()
+    criaCanvas();
     getPrice();
   });
 
   listaTokens.appendChild(li);
 }
-
