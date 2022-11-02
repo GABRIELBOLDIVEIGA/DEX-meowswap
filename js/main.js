@@ -17,15 +17,11 @@ async function getCoins() {
     criaListaTokens(element);
   });
 
-  findStable(cryptos);
-
-  // console.log(cryptos[0].price.toFixed(2));
+  findStableCoin(cryptos);
 }
 
-// ********************************************************************
-
 // seleciona a stable coin
-function findStable(cryptos) {
+function findStableCoin(cryptos) {
   const coin = cryptos.find((element) => element.symbol == "USDC");
 
   const stable = document.getElementById("token2");
@@ -48,13 +44,11 @@ function mostraListaTokens() {
 }
 
 function escondeSecao() {
-  // tokenInput.value = "";
   selecaoDeToken.classList.add("invisivel");
 }
 
 const tokenEscolhido = document.getElementById("token1");
 const div = tokenEscolhido.querySelector("div");
-
 function mostraTokenSelecionado(coin) {
   div.innerHTML = `
     <p id="${coin.id}">
@@ -75,28 +69,24 @@ quantidadeToken1.addEventListener("keyup", function () {
   output.textContent = "~$ " + this.value * preco;
 });
 
-
-/////////////////////////////////////////////////////////////////
-const btnOff = document.querySelector("[data-btn=off]")
-const btnOn = document.querySelector("[data-btn=on]")
-// console.log(btnOff, btnOn)
-
+const btnOff = document.querySelector("[data-btn=off]");
+const btnOn = document.querySelector("[data-btn=on]");
 btnOff.addEventListener("click", () => {
-  btnOn.classList.remove('ativo')
-  btnOff.classList.add('ativo')
+  btnOn.classList.remove("ativo");
+  btnOff.classList.add("ativo");
   btnOn.disabled = false;
-  let canvas = document.querySelector('canvas');
+  let canvas = document.querySelector("canvas");
   canvas.remove();
-})
+});
 
 btnOn.addEventListener("click", () => {
-  btnOff.classList.remove('ativo')
-  btnOn.classList.add('ativo')
+  btnOff.classList.remove("ativo");
+  btnOn.classList.add("ativo");
   btnOff.disabled = false;
   btnOn.disabled = true;
-  criaCanvas()
+  criaCanvas();
   getPrice();
-})
+});
 
 function criaCanvas() {
   let secSwap = document.querySelector(".secSwap");

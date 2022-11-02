@@ -37,12 +37,10 @@ header {
 
   width: 95%;
 
-  /* border: 3px solid red; */
-  /* margin: 1em 5em 0 3em; */
   margin-top: 1em;
 }
 
-menu {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,7 +62,6 @@ a {
   background-color: transparent;
   outline: 0px;
   border: 0px none;
-  /* border: 1px solid red; */
   margin: 0px;
   border-radius: 12px;
   cursor: pointer;
@@ -75,21 +72,16 @@ a {
   text-decoration: none;
   font-weight: 600;
   line-height: 25px;
-  /* max-width: 360px; */
   min-width: 90px;
   position: relative;
   height: 100%;
   min-height: 48px;
   flex-shrink: 0;
   overflow: hidden;
-  /* white-space: normal; */
   text-align: center;
   flex-direction: column;
   color: rgb(255, 255, 255);
   text-transform: inherit;
-
-  /* user-select: none; */
-  /* appearance: none; */
 }
 
 main {
@@ -158,42 +150,17 @@ main {
   color: white;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 5em;
-
-  border-radius: 23px;
-
-  width: 620px;
-  height: 420px;
-
-  background-color: rgb(52, 28, 40, 0.9);
-
-  padding: 25px;
-  box-sizing: border-box;
-
-  
-} 
-*/
-
-/* main p {
-  color: white;
-} */
-
 .mainTitulo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   width: 100%;
 
   font-weight: 900;
   font-size: 20px;
 
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .main-opcao-pro {
@@ -239,20 +206,11 @@ main {
 
   z-index: 10;
 
-  transform: translateY(139px);
+  transform: translateY(133px);
 
   background-color: #331a27;
 
   border-radius: 99px;
-
-  /* z-index: 10;
-  top: 90px;
-  right: 0;
-  left: 0;
-  
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #341c28; */
 }
 
 .seta {
@@ -275,19 +233,18 @@ main {
 }
 
 .svgSetaBordaCima {
-  transform: translateY(11.5px);
+  transform: translateY(10.5px);
   background-color: transparent;
 }
 
 .svgSetaBordaBaixo {
-  transform: translateY(-12.5px) rotate(180deg);
+  transform: translateY(-10.5px) rotate(180deg);
   background-color: transparent;
 }
 
 .btnSwap {
   font-weight: 500;
   font-size: 28px;
-  /* line-height: 35px; */
 
   cursor: pointer;
 
@@ -339,26 +296,6 @@ main {
   height: auto;
 }
 
-/* 
-section {
-  border: 1px solid white;
-
-  position: absolute;
-
-  transform: translateY();
-
-  min-width: 320px;
-  max-height: calc(100% - 64px);
-  border-radius: 15px;
-  background: #3b222f;
-
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
-  rgba(0, 0, 0, 0.12)
-
-  box-shadow: 1px 9px 10px 99px rgba(173, 71, 71, 0.12);
-} 
-*/
-
 footer {
   display: flex;
   justify-content: flex-end;
@@ -390,7 +327,6 @@ footer a span {
   width: 100%;
 
   border: 1px solid rgb(73, 51, 62);
-  /* border: 1px solid red; */
 
   border-radius: 12px;
 
@@ -401,10 +337,8 @@ footer a span {
 }
 
 .selec-token {
-  /* border: solid 1px blue; */
   margin-left: 0.5em;
   padding-left: 1em;
-  /* padding: 0 1em; */
 
   display: flex;
   align-items: center;
@@ -423,8 +357,6 @@ footer a span {
 .selec-token div {
   display: inline-flex;
   align-items: center;
-
-  /* border: 1px solid greenyellow; */
 }
 
 p + img {
@@ -438,7 +370,6 @@ p + img {
 .selec-token span {
   justify-self: flex-end;
   margin: 0 0.5em;
-  /* border: 1px solid purple; */
 }
 
 /* input quantidade  */
@@ -547,5 +478,12 @@ output {
 
   .secToken {
     visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1270px){
+  .sec-container {
+    display: flex;
+    flex-direction: column;
   }
 }
