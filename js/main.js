@@ -60,14 +60,7 @@ function mostraTokenSelecionado(coin) {
   quantidadeToken1.disabled = false;
 }
 
-const quantidadeToken1 = document.getElementById("quantidade");
-const output = document.querySelector("output");
-let preco;
-quantidadeToken1.addEventListener("keyup", function () {
-  console.log(this.value);
 
-  output.textContent = "~$ " + this.value * preco;
-});
 
 const btnOff = document.querySelector("[data-btn=off]");
 const btnOn = document.querySelector("[data-btn=on]");

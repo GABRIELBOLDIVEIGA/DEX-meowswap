@@ -22,3 +22,4 @@ btnSeta.addEventListener("click", function () {
   inputToken2.appendChild(listaAUX[1]);
   inputToken2.appendChild(listaPreco[1]);
 });
+
