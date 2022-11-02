@@ -68,7 +68,7 @@
   outline: 1px solid #f1c40f;
 }
 
-ul {
+#listaTokens {
   margin-top: 1em;
   margin-bottom: 1.5em;
 }
@@ -80,7 +80,7 @@ div img {
   padding-right: 0.5em;
 }
 
-li {
+#listaTokens li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +100,7 @@ li {
   font-weight: 700;
 }
 
-li:hover {
+#listaTokens li:hover {
   background: #371224;
 }
 

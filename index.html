@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/secToken.css" />
     <link rel="stylesheet" href="css/grafico.css" />
+    <link rel="stylesheet" href="css/selecaoWallet.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -43,8 +44,6 @@
 
     <main>
       <section class="sec-container">
-        
-
         <section class="secSwap">
           <div class="mainTitulo">
             <p>Exchange</p>
@@ -122,6 +121,47 @@
           <ul id="listaTokens"></ul>
         </div>
       </section>
+
+      <section class="secWallet invisivel">
+        <div id="wallet">
+          <div class="titulo">
+            <p>Conectar Carteira</p>
+            <span id="fechar-secWallet"
+              ><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="fill: white; cursor: pointer" width="24" height="24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#fff"></path></svg
+            ></span>
+          </div>
+
+          <ul class="ulCarteira">
+            <li class="liCarteira">
+              <p class="nomeWallet">NAMI WALLET</p>
+              <p class="info">Não instalada</p>
+              <img class="imgWallet" src="assets/svg/wallet-svg/nami-wallet.svg" />
+            </li>
+            <li class="liCarteira">
+              <p class="nomeWallet">GEROWALLET</p>
+              <p class="info">Não instalada</p>
+              <img class="imgWallet" src="assets/svg/wallet-svg/gero-wallet.svg" />
+            </li>
+            <li class="liCarteira">
+              <p class="nomeWallet">C-WALLET</p>
+              <p class="info">Não instalada</p>
+              <img class="imgWallet" src="assets/svg/wallet-svg/c-wallet.svg" />
+            </li>
+            <li class="liCarteira">
+              <p class="nomeWallet">YOROI</p>
+              <p class="info">Não instalada</p>
+              <img class="imgWallet" src="assets/svg/wallet-svg/yoroi-wallet.svg" />
+            </li>
+            <li class="liCarteira">
+              <p class="nomeWallet">ETERNL</p>
+              <p class="info">Não instalada</p>
+              <img class="imgWallet" src="assets/svg/wallet-svg/eternl-wallet.svg" />
+            </li>
+          </ul>
+
+          <p class="aviso">Nunca conecte sua carteira em <span>sites</span> ou <span>aplicativos</span> desconhecidos</p>
+        </div>
+      </section>
     </main>
 
     <div class="lovoCat">
@@ -150,8 +190,7 @@
     <script src="js/filtraToken.js"></script>
     <script src="js/selecaoToken.js"></script>
     <script src="js/inverteToken.js"></script>
-
     <script src="js/grafico.js"></script>
-    
+    <script src="js/conectarCarteira.js"></script>
   </body>
 </html>
